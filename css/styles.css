@@ -5,39 +5,47 @@
 
 body {
     font-family: 'Montserrat';
+    text-align: center;
 }
 
-h1 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 900;
-    font-size: 3.5rem;
-    line-height: 1.5;
-}
-
-h2 {
-    font-family: "Montserrat";
-    font-size: 3rem;
-    font-weight: 700;
-}
-
-h3 {
+h1, h2, h3, h4, h5 {
     font-family: "Montserrat";
     font-weight: 600;
-    font-size: 1.5rem;
 }
 
 p {
     color: #8f8f8f;
 }
 
-#title {
-    /* background-color: #3282b8; */
-    background-color: #ff4c68;
+/* Headings */
+
+.big-heading {
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 1.5;
+}
+
+.section-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* Containers */
+
+.container-fluid {
+    padding: 7% 15%;
+}
+
+/* Sections */
+
+.colored-section {
+    background-color: var(--tindog-pink);
     color: #fff;
 }
 
-.container-fluid {
-    padding: 3% 15%;
+.white-section {
+    background-color: #fff;
 }
 
 /* Navigation Bar */
@@ -66,35 +74,46 @@ p {
 /* Download Buttons */
 
 .download-btn {
-    /* margin-top: 16px;
-    margin-right: 16px; */
     margin: 5% 3% 5% 0;
+}
+
+/* Title Section */
+
+#title .container-fluid {
+    padding: 4% 15% 7%;
+    text-align: left;
 }
 
 /* Title Image */
 
 .dogphone {
     width: 50%;
-    display: block;
+    /* display: block; */
     transform: rotate(25deg);
-    margin: 2% auto;
+    margin: 0 auto;
+    position: absolute;
+    right: 30%;
 }
 
 /* Features Section */
 
 #features {
-    padding: 7% 15%;
+    position: relative;
+    z-index: 1;
+}
+
+.features__title {
+    font-weight: 600;
+    font-size: 1.5rem;
 }
 
 .features__info {
-    text-align: center;
     padding: 5%;
     line-height: 2;
 }
 
 .icon {
     color: #ef8172;
-    /* font-size: 4rem; */
     margin-bottom: 1rem;
 }
 
@@ -102,36 +121,26 @@ p {
     color: var(--tindog-pink);
 }
 
-/* .features__info h3 {
-    font-weight: 600;
-} */
-
-/* .features__info p {
-    color: rgb(136, 134, 134);
-} */
-
 /* Testimonials Section */
 
 #testimonials {
-    text-align: center;
     background: var(--tindog-orange);
-    color: #fff;
 }
 
-.carousel-item {
-    padding: 7% 15%;
+.testimonials__text {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.5;
 }
 
 .testimonials__image {
     border-radius: 100%;
     width: 10%;
-    /* display: block; */
     margin: 20px;
 }
 
 #press {
     background: var(--tindog-orange);
-    text-align: center;
     padding-bottom: 5%;
 }
 
@@ -144,10 +153,39 @@ p {
 
 #pricing {
     padding: 100px;
-    text-align: center;
+}
+
+.pricing__price-text {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.5;
 }
 
 .pricing__info {
     padding: 3% 2%;
-    /* text-align: center; */
+}
+
+/* CTA Section */
+
+#cta .container-fluid {
+    padding: 7% 25%;
+}
+
+/* Footer Section */
+
+.social-icon {
+    font-size: 1.5rem;
+    margin: 20px 10px;
+}
+
+@media (max-width: 1028px){
+
+    #title {
+        text-align: center;
+    }
+
+    .dogphone {
+        position: static;
+        transform: rotate(0);
+    }
 }
